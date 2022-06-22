@@ -1,0 +1,40 @@
+#h1 {
+    color: solid black;
+    text-align: center;
+    font-family: cursive;
+    font-size: xx-large;
+    background-color: #f5d6cb;
+    margin-bottom: 50px;
+  }
+  .generic-name{
+      text-align: center;
+      font-size: x-large;
+      font-family: fantasy;
+      background-color:#f8f3e9;
+      width:600px;
+      margin-left: 400px;
+      text-align: center;
+  }
+  h4{
+      margin-top: 35px;
+      margin-left: 100px;
+  }   
+  span{
+      color:black;
+      font-size: medium;
+      
+  }
+  .inner-page-answers{
+      color:black;
+      font-weight: normal;
+  }
+  .inner-page-pill-image{
+      width:300px;
+      height:300px;
+      margin-left: 220px;
+  }
+  .image-figcaption{
+      font-size: x-small;
+      flex: wrap;
+      margin-left: 130px;
+  }

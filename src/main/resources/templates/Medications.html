@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+
+<head>
+<title>This is the First page!</title>
+<link rel="styleSheet" type="text/css" th:href="@{/Medications.css}" />
+<link rel="styleSheet" type="text/css" th:href="@{/index.css}" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<h1 id="h1">Medications</h1>
+<div class="dropdown">
+	<a style="margin-left: 50px" class="btn btn-default dropdown-toggle"
+		data-toggle="dropdown" href="#"> <i class="icon-user"></i> Menu <span
+		class="caret"></span>
+	</a>
+	<ol class="dropdown-menu" role="menu" aria-labelledby="dLabel"
+		style="margin-left: 20px">
+		<li class="menu-dropdown-list"><a th:href="@{index}">Home</a></li>
+		<li class="menu-dropdown-list"><a tabindex="-1"
+			th:href="@{#}">Medications</a></li>
+		<li class="menu-dropdown-list"><a tabindex="-1"
+			th:href="@{AboutPage}">About</a></li>
+		<li class="menu-dropdown-list" sec:authorize="isAuthenticated()"><a tabindex="-1" th:href="@{/logout}">Logout</a></li>
+	</ol>
+</div>
+<button id="print" onclick="printWindow()">Print</button>
+<body>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Atorvastatin</h1>
+		<br>
+		<h3 class="brand-name">Lipitor</h3>
+		<br>
+		<p class="introduction">Atorvastatin is in a class of medications
+			called HMG-CoA reductase inhibitors (statins). It works by slowing
+			the production of cholesterol of the heart, brain, and other parts of
+			the body.</p>
+		<button class="info-button">
+			<a th:href="@{AtorvastatinPage}"> Info</a>
+		</button>
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Amoxicillin</h1>
+		<br>
+		<h3 class="brand-name">Amoxil</h3>
+		<br>
+		<p class="introduction">Amoxicillin is an antibiotic used to treat
+			a number of bacterial infections. These include middle ear infection,
+			strep throat, pneumonia, skin infections, and urinary tract
+			infections among others.</p>
+		<button class="info-button">
+			<a th:href="@{AmoxicillinPage}"> Info</a>
+		</button>
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Lisinopril</h1>
+		<br>
+		<h3 class="brand-name">Prinivil</h3>
+		<br>
+		<p class="introduction">Lisinopril is an angiotensin-converting
+			enzyme(ACE) inhibitor used in the therapy of hypertension and heart
+			failure. Lisinopril works by decreasing chemicals that tightens the
+			blood vessels.</p>
+		<button class="info-button">
+			<a th:href="@{LisinoprilPage}"> Info</a>
+		</button>
+		
+	</div>
+
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Levothyroxine</h1>
+		<br>
+		<h3 class="brand-name">Synthroid</h3>
+		<br>
+		<p class="introduction">Levothyroxine is used to treat
+			hypothyroidism. It is also used with surgery and radioactive iodine
+			therapy to treat thyroid cancer. Levothyroxine is in a class of
+			medications called hormones.</p>
+		<button class="info-button">
+			<a th:href="@{LevothyroxinePage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Albuterol</h1>
+		<br>
+		<h3 class="brand-name">Ventolin</h3>
+		<br>
+		<p class="introduction">Albuterol is used to prevent and treat
+			difficulty breathing, wheezing, shortness of breath, coughing, and
+			chest tightness caused by lung diseases, such as asthma, and
+			obstructive pulmonary disease.</p>
+		<button class="info-button">
+			<a th:href="@{AlbuterolPage}"> Info</a>
+		</button>
+		
+
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Metformin</h1>
+		<br>
+		<h3 class="brand-name">Glucophage</h3>
+		<br>
+		<p class="introduction">Metformin is a biguanide oral hypoglycemic
+			used primarily for treating type 2 diabetes mellitus. Metformin is
+			associated with improved all-cause and cardiovascular mortality1.</p>
+		<button class="info-button">
+			<a th:href="@{MetforminPage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Amlodipine</h1>
+		<br>
+		<h3 class="brand-name">Norvasc</h3>
+		<br>
+		<p class="introduction">Amlodipine is commonly used in the
+			treatment of high blood pressure and angina. It lowers blood pressure
+			by relaxing the blood vessels so the heart does not have to pump as
+			hard, reduces Nitric Acid.</p>
+		<button class="info-button">
+			<a th:href="@{AmlodipinePage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Metoprolol</h1>
+		<br>
+		<h3 class="brand-name">Lopressor</h3>
+		<br>
+		<p class="introduction">Metoprolol is an treatment for angina,
+			heart failure, myocardial infarction, atrial fibrillation/flutter,
+			and hypertension. Metoprolol is also used to lower risk of death or
+			heart failure.</p>
+		<button class="info-button">
+			<a th:href="@{MetoprololPage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Omeprazole</h1>
+		<br>
+		<h3 class="brand-name">Prilosec</h3>
+		<br>
+		<p class="introduction">Omeprazole is a proton pump inhibitor used
+			to treat symptoms of GERD, such as frequent heartburn and gastric
+			acid hypersecretion. It can decrease the amount of acid produced, and
+			promote healing of tissues.</p>
+		<button class="info-button">
+			<a th:href="@{OmeprazolePage}"> Info</a>
+		</button>
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Losartan</h1>
+		<br>
+		<h3 class="brand-name">Cozaar</h3>
+		<br>
+		<p class="introduction">Losartan is an angiotensin II receptor
+			blocker (ARB) used to treat hypertension.It can reduce the risk of
+			stroke in patients with high blood pressure with an enlarged heart,
+			and to treat kidney disease.</p>
+		<button class="info-button">
+			<a th:href="@{LosartanPage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Azithromycin</h1>
+		<br>
+		<h3 class="brand-name">Zithromax</h3>
+		<br>
+		<p class="introduction">Azithromycin is indicated for the
+			treatment of patients with mild to moderate infections caused by
+			susceptible strains of the microorganisms.It can treat various types
+			of infections, including pink eye.</p>
+		<button class="info-button">
+			<a th:href="@{AzithromycinPage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Prednisone</h1>
+		<br>
+		<h3 class="brand-name">Deltasone</h3>
+		<br>
+		<p class="introduction">Prednisone is a synthetic,
+			anti-inflammatory glucocorticoid that derives from
+			cortisone.Prednisone is an delayed-release corticosteroid agent to
+			treat a broad range of diseases and inflammations.</p>
+		<button class="info-button">
+			<a th:href="@{PrednisonePage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box" style="margin-bottom: 100px">
+		<p>
+		<h1 class="generic-name">Ibuprofen</h1>
+		<br>
+		<h3 class="brand-name">Advil</h3>
+		<br>
+		<p class="introduction">Ibuprofen is part of the nonsteroidal
+			anti-inflammatory drug (NSAID) class that is used for treating pain,
+			fever, toothache, headache, arthritis, pain, swelling, and
+			inflammation. An OTC medication.</p>
+		<button class="info-button">
+			<a th:href="@{IbuprofenPage}"> Info</a>
+		</button>
+		
+
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h2
+			style="text-align: center; width: 300px; height: 15px; font-size: x-large">Hydrocodone
+			& Acetaminophen</h2>
+		<br>
+		<h3 style="text-align: center; margin-top: 5px;">Norco</h3>
+		<br>
+		<p class="introduction">Hydrocodone and Acetaminophen is an opioid
+			used to treat moderate to severe pain. Its an combination of
+			Acetaminophen and Hydrocodone for extreme pain, it belongs to the
+			Analgesic class. Mainly used for birth and surgery.</p>
+
+		<button class="info-button">
+			<a th:href="@{HydrocodoneAndAcetaminophenPage}"> Info</a>
+		</button>
+		
+		
+	</div>
+
+	<div class="medication-box ">
+		<p>
+		<h1 class="generic-name">Gabapentin</h1>
+		<br>
+		<h3 class="brand-name">Neurontin</h3>
+		<br>
+		<p class="introduction">Gabapentin is an anticonvulsive that
+			adjunct to more potent anticonvulsants.It can treat pain caused by
+			shingles and neuralgia. Able decrease seizures by decreasing abnormal
+			excitement in the brain.</p>
+		<button class="info-button">
+			<a th:href="@{GabapentinPage}"> Info</a>
+		</button>
+		
+	</div>
+</body>
+
+
+
+
+
+
+
+<script src="./print.js" defer></script>
+</html>

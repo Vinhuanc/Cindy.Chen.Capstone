@@ -1,0 +1,14 @@
+#registration-word {
+	font-family: cursive;
+	font-weight: bold;
+	font-size: 35px
+	
+}
+
+.user-question {
+	font-family: monospace;
+	font-weight: bold;
+}
+body{
+	width:100%;
+}

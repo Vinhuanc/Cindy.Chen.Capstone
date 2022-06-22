@@ -1,0 +1,33 @@
+.about-introduction{
+    text-align: flex-start;
+    font-family: monospace;
+    font-size: x-large;
+    margin-top: 40px;
+    margin-left: 120px;
+     line-height: 5.9;
+}
+.first-line{
+    line-height: 2;
+    text-align: flex-start;
+   
+    font-family: monospace;
+    font-size: x-large;
+
+    margin-left: 6em;
+    
+}
+#myCarousel{
+	width:900px;
+	height:600px;
+	margin-left:20%
+}
+.carousel-inner{
+	width:900px;
+	height:600px;
+}
+.left carousel-control{
+	height:600px;
+}
+.carousel-control{
+	height:600px;
+}

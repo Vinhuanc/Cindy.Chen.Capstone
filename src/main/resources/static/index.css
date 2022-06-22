@@ -1,0 +1,9 @@
+#print{
+	border: 1px solid black;
+    width:80px;
+    height: 25px;
+    background-color: white;
+    margin-left: 1300px;
+    border-radius: 5%;
+    text-align: center;
+}

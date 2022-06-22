@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      >
+<head>
+<meta charset="utf-8"/>
+<title>This is the Home page!</title>
+<link rel="styleSheet" type="text/css" th:href="@{/Medications.css}" />
+<link rel="styleSheet" type="text/css" th:href="@{/index.css}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<h1 id="h1" >Medications </h1>
+   <div class="dropdown" >
+    <a
+      style="margin-left: 50px"
+      class="btn btn-default dropdown-toggle"
+      data-toggle="dropdown"
+      href="#"
+    >
+      <i class="icon-user"></i> Menu
+      <span class="caret"></span>
+    </a>
+    <ol
+      class="dropdown-menu"
+      role="menu"
+      aria-labelledby="dLabel"
+      style="margin-left: 20px"
+    >
+    <li class="menu-dropdown-list"><a th:href="@{#}">Home</a></li>
+      <li class="menu-dropdown-list">
+        <a tabindex="-1"  th:href="@{Medications}">Medications</a>
+        
+      </li>
+      <li class="menu-dropdown-list">
+        <a tabindex="-1"  th:href="@{AboutPage}">About</a>
+        </li>
+       <li class="menu-dropdown-list" sec:authorize="isAuthenticated()"><a tabindex="-1" th:href="@{/logout}">Logout</a></li>
+    </ol>
+    </div>
+    <button id="print" onclick="printWindow()">Print</button>
+    
+<body>
+<div align="center"  >
+    <h1>Medication List</h1>
+    <a href="/new">Create New Medication</a>
+    <br/><br/>
+    <table border="1" cellspacing="20px" style=width:600px>
+        <thead >
+            <tr>
+                <th>Medication ID</th>
+                <th> Generic Name</th>
+                <th>Brand Name</th>
+                <th>Medication Class</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="medication : ${listMedications}">
+                <td th:text="${medication.medicationID}">Medication ID</td>
+                <td th:text="${medication.genericName}">Generic Name</td>
+                <td th:text="${medication.brandName}">Brand Name</td>
+                <td th:text="${medication.medicationClass}">Medication Class</td>
+                
+                <td>
+                    <a th:href="@{'/edit/' + ${medication.medicationID}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/delete/' + ${medication.medicationID}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+<script src="./print.js" defer></script>
+
+</html>

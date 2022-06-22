@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New Medication</title>
+</head>
+<link rel="stylesheet" th:href="@{/new_medication.css}">
+<body>
+    <div align="center">
+        <h1>Create New Medication</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${medication}"
+            method="post">
+ 
+            <table border="0" cellpadding="10">
+            	
+                <tr>
+                    <td>Medication Generic Name:</td>
+                    <td><input type="text" th:field="*{genericName}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Brand Name:</td>
+                    <td><input type="text" th:field="*{brandName}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Class:</td>
+                    <td><input type="text" th:field="*{medicationClass}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Main Purpose:</td>
+                    <td><input type="text" th:field="*{mainPurpose}" /></td>
+                </tr>   
+                <tr>
+                    <td>Medication Upper Body:</td>
+                    <td><input type="text" th:field="*{upperBody}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Lower Body:</td>
+                    <td><input type="text" th:field="*{lowerBody}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Year Of Approval:</td>
+                    <td><input type="text" th:field="*{yearOfApproval}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Prescription Quantity:</td>
+                    <td><input type="text" th:field="*{prescriptionQuantity}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Introduction:</td>
+                    <td><input type="text" th:field="*{introduction}" /></td>
+                </tr>
+                <tr>
+                    <td>Medication Image URL:</td>
+                    <td><input type="text" th:field="*{URL}" /></td>
+                </tr>
+                                         
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

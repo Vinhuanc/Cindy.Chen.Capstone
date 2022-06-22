@@ -1,0 +1,88 @@
+#h1 {
+  color: solid black;
+  text-align: center;
+  font-family: cursive;
+  font-size: xx-large;
+  background-color: #f5d6cb;
+  margin-bottom: 50px;
+}
+
+
+
+.medication-box {
+  width: 300px;
+  height: 350px;
+  border: solid black 1px;
+  border-radius: 10%;
+  margin-left: 40px;
+  display: inline-block;
+  margin-top: 40px;
+  background-color: #ffe5d8;
+ 
+}
+
+.generic-name {
+  text-align: center;
+   width: 300px;
+  height: 15px;
+  
+}
+
+.brand-name {
+  text-align: center;
+  margin-top: 0;
+}
+
+.introduction {
+  font-family: monospace;
+  opacity: 0.4px;
+  text-align: center;
+  font-size: large;
+ /*  margin-top: -10px; */
+}
+.table-header{
+    text-align: center;
+    font-size: larger;
+    color: red;
+}
+.info-button{
+  margin-left:40%;
+  font-size:medium;
+  
+}
+.update-button{
+  margin-left: 30px;
+}
+.delete-button{
+  margin-left:30px;
+}
+.add-medication-box{
+  width:300px;
+  height:300px;
+  border: 1px solid black;
+  border-radius: 10%;
+  margin-left: 40px;
+  display: inline-block; 
+  /* font-size: xx-large;
+  font-family: 'Courier New', Courier, monospace;
+  align-content: center; */
+  
+
+}
+/* .plus-sign-image{
+  margin-top:200px; 
+  margin-left:100px;
+  height: 100px;
+  width: 100px;
+  justify-content: baseline;
+} */
+.dropdown-menu{
+  font-family: monospace;
+  font-size: larger;
+}
+.menu-dropdown-list{
+ font-family: cursive;
+ font-size: x-large;
+ text-align: center;
+}
+

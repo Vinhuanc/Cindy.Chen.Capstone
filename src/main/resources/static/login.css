@@ -1,0 +1,15 @@
+#login-page-word{
+	font-family:cursive;
+	font-weight: bold;
+	font-size: 35px;
+	
+}
+ body{
+	width:100%;
+	 background: linear-gradient(#ccffff, #ffcccc); 
+	margin-left:5%;
+	margin-top:15%;
+	height:800px;
+}
+
+
